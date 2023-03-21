@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "KPad.h"
 #include "KMaterial.h"
+#include "nrutil.h"
 
 #define JMAX 40
 
@@ -64,7 +65,6 @@ void KPad::SetUpElectrodes()
 //_________________________________________________________________________________
 Float_t  KPad::rtbis(float x1, float x2, float xacc)
 {
-	void nrerror(char error_text[]);
 	int j;
 	float dx,f,fmid,xmid,rtb;
 

@@ -1,7 +1,7 @@
 #include "TPolyLine3D.h"
 #include "KDetector.h"
 #include "TFile.h"
-
+#include "nrutil.h"
 
 #define ABS(x) x>0?x:-x
 #define PREDZNAK(x) x>0?1:-1
@@ -172,7 +172,6 @@ void linbcg(unsigned long n, int dim[], double b[], double x[], int itol, double
 	double snrm(unsigned long n, double sx[], int itol);
 	double *dvector(long, long);
 	void free_dvector(double *, long, long);
-	void nrerror(char error_text[]);
 	unsigned long j;
 	double ak,akden,bk,bkden,bknum,bnrm,dxnrm,xnrm,zm1nrm,znrm;
 	double *p,*pp,*r,*rr,*z,*zz;
