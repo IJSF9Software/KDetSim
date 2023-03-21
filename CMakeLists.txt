@@ -16,21 +16,21 @@ include(ROOT)
 #---Define includes
 include_directories(inc)
 set(Project_Includes
-    inc/K3D.h
-    inc/KDetector.h
-    inc/KField.h
-    inc/KGeometry.h
-    inc/KImplant2D.h
-    inc/KImplant3D.h
-    inc/KMaterial.h
-    inc/KMesh.h
-    inc/KPad.h
-    inc/KPixel.h
-    inc/KStrip.h
-    inc/KStruct.h
+    K3D.h
+    KDetector.h
+    KField.h
+    KGeometry.h
+    KImplant2D.h
+    KImplant3D.h
+    KMaterial.h
+    KMesh.h
+    KPad.h
+    KPixel.h
+    KStrip.h
+    KStruct.h
 
-    inc/fizika.h
-    inc/nrutil.h
+    fizika.h
+    nrutil.h
 )
 
 #---Define sources
@@ -66,6 +66,8 @@ set(Project_Sources ${Project_Sources} G__${PROJECT_NAME}.cxx)
 add_library(${PROJECT_NAME} SHARED
     ${Project_Sources}
 )
+
+list(TRANSFORM Project_Includes PREPEND "inc/")
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     PUBLIC_HEADER "${Project_Includes}")
