@@ -27,7 +27,7 @@ void KStruct::Clear()
 
 void KStruct::Info()
 {
-    printf("\nParticle Cahrge= %d\n", PCharge);
+    printf("\nParticle Charge= %d\n", PCharge);
     printf("Number of Steps= %d\n", Steps);
     printf("Drift Strip    = %d\n", DStrip);
     printf("Pathlenght X   = %f\n", Xlenght);
