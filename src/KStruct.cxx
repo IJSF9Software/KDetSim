@@ -39,7 +39,6 @@ void KStruct::Info()
 
 void KStruct::Draw(Char_t *option)
 {
-    Char_t *name = "Vector Plot";
     Float_t *x, *y;
     if (!strcmp(option, "xy") || !strcmp(option, "yx")) {
         x = Xtrack;
@@ -67,7 +66,7 @@ void KStruct::Draw(Char_t *option)
     }
 
     TGraph *gr = new TGraph(Steps - 1, &x[3], &y[3]);
-    gr->SetTitle(name);
+    gr->SetTitle("Vector Plot");
     gr->Draw("AL");
     gr->GetHistogram()->Draw();
     gr->Draw("AL*");
