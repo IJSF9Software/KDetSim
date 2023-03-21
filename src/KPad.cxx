@@ -285,7 +285,7 @@ for(j=1;j<=ny;j++)
 
 
 
-TGraph *KPad::DrawPad(char *option)
+TGraph *KPad::DrawPad(const char *option)
 {
   //Draws potential "p" or  electric field "f"
 Char_t Opt[10];

@@ -56,7 +56,7 @@ public:
    void SetUpElectrodes();
   
  
-   TGraph   *DrawPad(char*);
+   TGraph   *DrawPad(const char*);
    void CalField(Int_t what) {if(what==1) GetRamoField(); else GetField();}
    void GetRamoField(TH1F *rf);
    void GetField(TH1F *rf);
